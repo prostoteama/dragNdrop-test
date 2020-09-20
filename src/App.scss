@@ -1,0 +1,58 @@
+@import './scss-vars/index';
+@import './scss-vars/mixins';
+
+.header {
+  height: 100%;
+  display: flex;
+  font-size: 1rem;
+
+  &__drag-n-drop {
+    padding: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: max-content;
+  }
+
+  &__dnd-group {
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    padding: 0.5rem;
+    height: fit-content;
+    // min-height: 100px;
+
+    & > p {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+
+        & + .header__dnd-item {
+            margin-top: .5rem;
+        }
+    }
+
+    & .current {
+      background-color: $color;
+    }
+  }
+
+  &__dnd-item {
+    background-color: $extraColor;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-of-type) {
+        margin-bottom: .5rem;
+    }
+
+    & > p {
+        margin: 0;
+        font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@mixin textDec {
+    font: {
+        size: 1rem;
+        family: Arial;
+        weight: bold;
+    }
+    color: rgb(138, 128, 128);
+}
