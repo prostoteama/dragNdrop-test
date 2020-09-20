@@ -1,5 +1,8 @@
-@import './scss-vars/index';
-@import './scss-vars/mixins';
+@import "./scss-vars/index";
+@import "./scss-vars/mixins";
+body {
+  background-color: $color;
+}
 
 .header {
   height: 100%;
@@ -24,13 +27,13 @@
     // min-height: 100px;
 
     & > p {
-        text-align: left;
-        font-size: 1.2rem;
-        margin-bottom: 0;
+      text-align: left;
+      font-size: 1.2rem;
+      margin-bottom: 0;
 
-        & + .header__dnd-item {
-            margin-top: .5rem;
-        }
+      & + .header__dnd-item {
+        margin-top: 0.5rem;
+      }
     }
 
     & .current {
@@ -47,12 +50,12 @@
     align-items: center;
 
     &:not(:last-of-type) {
-        margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     & > p {
-        margin: 0;
-        font-size: 1rem;
+      margin: 0;
+      font-size: 1rem;
     }
   }
 }
